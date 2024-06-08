@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+  }
+
+  header {
+    margin-left: 10px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sidebar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-icon img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .fullscreen {
+    position: fixed;
+    top: 0;
+    left: 60px; /* Adjust this value to match the sidebar width */
+    width: calc(100% - 60px);
+    height: 100%;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  .fullscreen img {
+    max-width: 100%;
+    max-height: 100%;
+    animation: fadeOut 6s forwards;
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 60px; /* Adjust this value to match the sidebar width */
+    width: calc(100% - 60px);
+    height: 100%;
+    background-color: orange;
+    z-index: 997;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  .loading-message {
+    color: #fff;
+    font-size: 24px;
+    animation: fadeOut 2s 4s forwards;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .section {
+    padding: 20px 0;
+  }
+  
+  .image-half {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .image-half img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .text-half {
+    flex: 1;
+    padding: 0 40px;
+  }
+
+  .text-half h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .text-half p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  @media(max-width: 700px) {
+    .text-half h2{
+      font-size: 17px;
+    }
+
+    .text-half p {
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Davicy Contact</title>
+
+	<style>
+		.hero {
+			background-image: url('dpics/ex.jpg');
+			background-size: fit;
+			background-position: center;
+			height: 600px;
+			display: flex;
+			align-items: center;
+			text-align: center;
+		}
+
+		.form-group {
+			margin-bottom: 10px;
+		}
+
+		.form-group label {
+			display: block;
+			font-weight: bolder;
+			margin-bottom: 5px;
+		}
+
+		.form-group input[type="text"],
+		.form-group input[type="email"],
+		.form-group textarea {
+			width: 100%;
+			padding: 5px;
+		}
+
+		.form-group input[type="file"] {
+			margin-top: 5px;
+		}
+
+		.form-group .upload-button {
+			display: inline-block;
+			padding: 5px 10px;
+			background-color: #ddd;
+			border: none;
+			color: #333;
+			font-size: 15px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-image 0.3s
+		}
+
+		.form-group .upload-button:hover {
+			background-color: rgba(0, 110, 255, 0.877);
+		}
+
+		.form-group .file-name {
+			display: inline-block;
+			margin-left: 10px;
+		}
+
+		.form-group .submit-button {
+			padding: 10px 20px;
+			background: #333;
+			border: none;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-image 0.3s
+		}
+
+		.form-group .submit-button:hover {
+			background-color: #555;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="hero">
+		
+		<form action="https://formspree.io/xxx" method="POST" enctype="multipart/form-data">
+
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" placeholder="e.g. David Davicy" required>
+			</div>
+
+			<div class="form-group">
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address" placeholder="Enter your address/Country/Region/State" required>
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required placeholder="e.g. davicy@infor.org">
+			</div>
+
+			<div class="form-group">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" rows="4" placeholder="Type here!... e.g. I would like to submit my Innbucks screenshot as payment approval." required></textarea>
+			</div>
+
+			<div class="form-group">
+				<label for="file">Upload photo/pdf/doc:</label>
+				<input type="file" id="file" name="file" accept=".jpg, .jpeg, .png, .pdf, .doc, .docx">
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Submit" class="submit-button">
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</html>
